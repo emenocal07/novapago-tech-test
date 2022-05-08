@@ -1,13 +1,13 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import CryptoListPage from '../pages/CryptoListPage'
+import HomePage from '../pages/HomePage/HomePage'
 
 
 const AppRoutes = () => {
     return (
 
         <Routes>
-            <Route path='/' element={<CryptoListPage/>} />
+            <Route path='/' element={<HomePage/>} />
         </Routes >
     )
 }

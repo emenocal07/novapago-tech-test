@@ -4,18 +4,13 @@ class CryptosService {
     constructor() {
         this.api = axios.create({ baseURL: `https://api.coincap.io/v2` })
     }
-    getAllCryptos = () => {
+    getCryptos = () => {
         return this.api.get('/assets')
     }
-    
-    getTenCryptosByMarketCap = (id) => {
-        return this.api.get(`/assets/${id}/history`)
-    }
-    
-    getOneCrypto = id => {
-        return this.api.get(`/assets/${id}`)
-    }
 
+    getCryptosHistory = id => {
+        return this.api.get(`/assets/${id}/history?interval=d1`)
+    }
 
 }
 
